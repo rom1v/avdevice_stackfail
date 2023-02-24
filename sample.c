@@ -6,7 +6,7 @@ static void *run(void *) {
 }
 
 int main(void) {
-    avdevice_register_all();
+    avdevice_version();
 
     pthread_attr_t attr;
     if (pthread_attr_init(&attr)) {
