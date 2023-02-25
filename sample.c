@@ -6,7 +6,7 @@ static void *run(void *) {
 }
 
 int main(void) {
-    avdevice_version();
+    //avdevice_version();
 
     pthread_attr_t attr;
     if (pthread_attr_init(&attr)) {
@@ -22,6 +22,7 @@ int main(void) {
     pthread_t thread;
     if (pthread_create(&thread, &attr, run, NULL)) {
         fprintf(stderr, "Could not create thread\n");
+        sleep(100);
         return 1;
     }
 
